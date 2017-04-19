@@ -1,0 +1,407 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaJam |BEM| Site: Richard Martinez</title>
+<style>
+	.logofirst img {display: block; margin: 0 auto}
+	
+	.title {text-align: center; margin-top: 20px}
+	
+	.socialmedia li {list-style-type: none; display:inline; }
+	
+	.navigationbar li {list-style-type: none; display: inline; }
+	
+	.navigationbar li a:hover {color: black}
+	
+	.tableofcontents {position: fixed; top: 20px; margin-top: 240px; left: 180px}
+	
+	.entirepage {float: right;}
+	
+	footer {margin-bottom: 20px; margin-top: 20px}
+	
+	pre {border: 1px solid #9A9A9A; padding: 20px; border-radius: 25px; background-color: lightgray}
+	
+	.socialmedia {position: relative; left: 370px}
+	
+	.navigationbar li {font-size: 150%; margin: 0 10px}
+	
+	.socialnavigation {position: relative; top: -50px; left: 180px}
+	
+	.headerinfo {border: 1px solid #9A9A9A; padding: 0 0 -100px 0; border-radius: 20px 20px 0 0}
+	
+	.brandlogo {position: relative; top: 50px; left: 30px}
+	
+	td {border-bottom: 1px solid black; border-collapse: collapse}
+	
+	table td:nth-of-type(even) {padding-left: 250px; font-size: 120%}
+	
+	.headerinfo li a {text-decoration: none; color: black}
+	
+	.headerinfo {background-color: grey}
+	
+	.table h1 {font-size: 400%}
+	.table h2 {font-size: 300%}
+	.table h3 {font-size: 200%}
+	.table h4 {font-size: 150%}
+	
+	.headercode {border: 1px solid black; border-radius: 0 0 20px 20px; background-color: lightgray}
+	
+	.headercode pre {border: none; }
+	
+	.pagecode {border: 1px solid black; border-radius: 0 0 20px 20px; background-color: lightgray}
+	
+	.pagecode pre {border: none; }
+	
+	.headerinfo {background-color: white}
+	
+	.tableofcontents li a {text-decoration: none; color: black; }
+	
+	.tableofcontents {border: 1px solid black; padding: 20px;}
+	
+	.copyright {display: block; margin: 0 auto; font-weight: bold}
+	
+	.title h1 {font-family: "Trebuchet MS", Verdana, "sans-serif"}
+	
+	h2 {font-family: "Trebuchet MS", Verdana, "sans-serif" }
+	
+	h4 {font-family: "Trebuchet MS", Verdana, "sans-serif" }
+	
+	p {font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"}
+	
+	.navigationbar li {font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"}
+	
+	.typoarea li {font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"}
+	
+	.inline li {list-style-type: none; display: inline}
+	
+	.example {border: 1px solid #9A9A9A; padding: 0 0 0 10px ; border-radius: 20px 20px 0 0 ; background-color: white}
+	
+	.inline li {padding: 20px}
+	</style>
+</head>
+
+<body>
+
+<div id="topofpage" class="logofirst">
+<img src="JavaJam%20Logo.png" alt="Logo" height="200" width="160">
+	</div>
+	
+<div class="title">
+	<h1>BEM Site Layout</h1>
+</div>
+
+<div class="tableofcontents">
+          <h3>Table of Contents</h3>
+          <ul>
+            <li><a href="#setup">Initial Set Up</a></li>
+            <li><a href="#headernav">Header &amp; Navigation</a></li>
+            <li><a href="#typography">Typography</a>
+   				<ul>
+                <li><a href="#headings">Headings</a></li>
+                <li><a href="#bodycopy">Body Copy</a></li>
+                <li><a href="#bold">Bold</a></li>
+                <li><a href="#lists">Lists</a></li>
+                <ul>
+                <li><a href="#olist">Ordered List</a></li>
+                <li><a href="#ulist">Unordered List</a></li>
+                <li><a href="#ilist">Inline List</a></li>
+              </ul>
+            </li>
+            <li class="backtotop"><a href="#topofpage">back to top <img src="arrow4.png" height="15" width="15"><i class="uparrow"></i></a></li>
+          </ul>
+        </div>
+        
+ <div class="entirepage">
+ 
+ <div class="setup">
+ 
+ 
+<h2 id="setup">HTML Basic Set Up</h2>
+	
+<pre>
+	<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;JavaJam | BEM | Site: Richard Martinez&lt;/title&gt;
+
+    &lt;link rel="stylesheet" href=""&gt;
+    &lt;link rel="stylesheet" href=""&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+	</code>
+</pre>
+
+	 </div>
+	
+   <header>
+    <h2 id="headernav">Header &amp; Navigation</h2>
+    <div id="header" class="headerinfo">
+                <div class="brandlogo">
+                  <img src="JavaJam%20Logo.png" height="150" width="120"/>
+                </div>
+                <div class="socialnavigation">
+                  <ul class="socialmedia">
+                    <li><img src="facebook-3.png" height="30" width="30"><a href="#" target="_blank"><i class="facebook"></i></a></li>
+                    <li><img src="672f88933a5add7f407647d3ac640baf_circle-twitter-icon-twitter-icon-clipart_512-512.png" height="30" width="30"><a href="#" target="_blank"><i class="twitter"></i></a></li>
+                    <li><img src="instagram_new-512.png" height="30" width="30"><a href="#" target="_blank"><i class="instagram"></i></a></li>
+                    <li><img src="mail-512.png" height="30" width="30"><a href="#" target="_blank"><i class="mail"></i></a></li>
+                  </ul>
+                  <ul class="navigationbar">
+                    <li><a href="#">Our Menu</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Order Online</a></li>
+                    <li><a href="#">Join Java</a></li>
+                  </ul>
+       			</div>
+			</div>
+	</header>
+	
+<div class="headercode">
+
+	 <pre>
+	 <code>
+
+&lt;header&gt;
+   
+    &lt;h2 id="headernav"&gt;Header &amp; Navigation&lt;/h2&gt;
+    
+    &lt;div id="header" class="headerinfo"&gt;
+               
+                &lt;div class="brandlogo"&gt;
+                	&lt;img src="JavaJam%20Logo.png" height="150" width="120"/&gt;
+                &lt;/div&gt;
+                
+                &lt;div class="socialnavigation"&gt;
+                	&lt;ul class="socialmedia"&gt;
+                	
+                		&lt;li&gt;&lt;img src="facebook-3.png" height="30" width="30"&gt;&lt;a 
+                		href="#" target="_blank"&gt;&lt;i class="facebook"&gt;&lt;/i&gt;&lt;/a&gt;
+                		&lt;/li&gt;
+                		
+                		&lt;li&gt;&lt;img src="672f88933a5add7f407647d3ac640baf_circle-
+                		twitter-icon-twitter-icon-clipart_512-512.png" height="30" 
+                		width="30&gt;&lt;a href="#" target="_blank"&gt;&lt;i class="twitter"&gt;&lt;/i&gt;&lt;/a&gt;
+                		&lt;/li&gt;
+                		
+                		&lt;li&gt;&lt;img src="instagram_new-512.png" height="30" width="30"&gt;&lt;
+                		a href="#" target="_blank"&gt;&lt;i class="instagram&lt;/i&gt;&lt;/a&gt;
+                		&lt;/li&gt;
+                		
+                		&lt;li&gt;&lt;img src="mail-512.png" height="30" width="30"&gt;&lt;a 
+                		href="#" target="_blank"&gt;&lt;i class="mail"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+               		&lt;/ul&gt;
+               		
+                	&lt;ul class="navigationbar"&gt;
+                    	&lt;li&gt;&lt;a href="#"&gt;Our Menu&lt;/a&gt;&lt;/li&gt;
+                    	&lt;li&gt;&lt;a href="#"&gt;Events&lt;/a&gt;&lt;/li&gt;
+                    	&lt;li&gt;&lt;a href="#"&gt;Order Online&lt;/a&gt;&lt;/li&gt;
+                    	&lt;li&gt;&lt;a href="#"&gt;Join Java&lt;/a&gt;&lt;/li&gt;
+                  	&lt;/ul&gt;
+                  	
+       		&lt;/div&gt;
+       		
+	&lt;/div&gt;
+	
+&lt;/header&gt;
+
+</code>
+ </pre>
+ 
+	 </div>
+<div id="typography" class="typoarea">
+            <h2>Typography</h2>
+            <p>The following fonts are used for this site:</p>
+            <ul>
+              <li><strong>Headings:</strong><br />
+                <code>font-family: "Trebuchet MS", Verdana, "sans-serif"</code>
+              </li>
+              <li><strong>Body Copy:</strong><br />
+                <code>font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L",<br> 
+                "Times New Roman", "serif"</code>
+              </li>
+	</ul>
+	<h3 id="headings">Headings</h3>
+            <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h4&gt;</code>,are available for this site. .h1 and .h4 classes are available for<br> 
+            when a title or a main portion of a page has the look of a header, but the rest of the text involved can<br> 
+            still be displayed in a normal manner. 
+            </p>
+             <div class="headingexample">
+             <pre>
+              <table class="table">
+                <tr>
+                  <td><h1>h1. Heading</h1></td>
+                  <td>size 4.236em</td>
+                </tr>
+                <tr>
+                  <td><h2>h2. Heading</h2></td>
+                  <td>size 2.618em</td>
+                </tr>
+                <tr>
+                  <td><h3>h3. Heading</h3></td>
+                  <td>size 1.618em</td>
+                </tr>
+                <tr>
+                  <td><h4>h4. Heading</h4></td>
+                  <td>size 1em</td>
+                </tr>
+              </table>
+              </pre>
+	</div>
+<h3 id="bodycopy">Body copy</h3>
+  <h4>Example Body Copy Text</h4>
+   <div class="example">
+    <div class="bodycopy">
+              <p>   JavaJam is the coffee haven you'd been looking for. Existing for over a decade, JavaJam Coffeehouse<br>
+                    provides coffee drinks and musical entertainment for all kinds of life. We take pride in our coffee<br> 
+                    recipes and the acts we associate ourselves with.</p>
+              <p>   Our business sets itself apart from all other coffeehouses. A combination of different events every<br> 
+                    week, amazing coffee drinks, and online ordering makes us unique. Our menu is vast. Our baristas our<br> 
+                    skilled to make any coffee or tea related drink.</p> 
+			  <p>   Located near downtown Dallas, JavaJam is well praised in the community as the "to-go" coffee shop. Free<br> 
+			        Wi-Fi, vibing atmosphere, and drinks that make you want to come back for more.</p>
+	</div>
+	</div>
+	<div class="pagecode">
+	 <pre>
+            <code>
+&lt;p&gt;JavaJam is the coffee haven you'd been looking for. Existing for over a decade, JavaJam
+Coffeehouse&lt;br&gt;provides coffee drinks and musical entertainment for all kinds of life. 
+We take pride in our coffee&lt;br&gt;recipes and the acts we associate ourselves with.&lt;/p&gt;
+
+&lt;p&gt;Our business sets itself apart from all other coffeehouses. A combination of different 
+events every&lt;br&gt;week, amazing coffee drinks, and online ordering makes us unique. Our menu 
+is vast. Our baristas our&lt;br&gt; skilled to make any coffee or tea related drink.&lt;/p&gt;
+
+&lt;p&gt;Located near downtown Dallas, JavaJam is well praised in the community as the "to-go" 
+coffee shop. Free&lt;br&gt; Wi-Fi, vibing atmosphere, and drinks that make you want to come back
+for more.&lt;/p&gt;
+            </code>
+            </pre>
+            </div>
+            
+ <h3 id="bold">Bold</h3>
+	<h4>Example Bold Text</h4>
+           <div class="example">
+            <div class="bold">
+              <p><strong>We're here to provide the best service for you.</strong></p>
+			   </div>
+	</div>
+      <div class="pagecode">
+              <pre>
+            <code>
+&lt;p&gt;&lt;strong&gt;We're here to provide the best service for you.&lt;/strong&gt;&lt;/p&gt;
+            </code>
+            </pre>
+            </div>
+	
+<h2 id="lists">Lists</h2>
+
+<div class="olist">
+ <h3 id="olist">Ordered List</h3>
+	<h4>Example Ordered List</h4>
+            <div class="example">
+              <ol class="ordered">
+                <li>Bagels</li>
+                <li>Donuts</li>
+				  <li>Coffee Cake</liv>
+                  <ol>
+                    <li>Buttermilk Coffee Cake</li>
+                    <li>Sugar-Pecan Coffee Cake</li>
+                  </ol>
+                </li>
+                <li>Cookies</li>
+              </ol>
+	</div>
+	</div>
+             <div class="pagecode">
+              <pre>
+            <code>
+&lt;ol&gt;
+  &lt;li&gt;Bagels&lt;/li&gt;
+  &lt;li&gt;Donuts&lt;/li&gt;
+  &lt;li&gt;Coffee Cake&lt;/li&gt;
+  &lt;ol&gt;
+  	&lt;li&gt;Buttermilk Coffee Cake&lt;/li&gt;
+  	&lt;li&gt;Sugar-Pecan Coffee Cake&lt;/li&gt;
+  &lt;/ol&gt;
+  	&lt;li&gt;Cookies&lt;/li&gt;
+&lt;/ol&gt;
+            </code>
+            </pre>
+            </div>
+
+<div class="ulist">
+<h3 id="ulist">Unordered List</h3>
+       <h4>Example Unordered List</h4>
+            <div class="example">
+              <ul class="unordered">
+                <li>Freshly Brewed Coffee</li>
+                <li>Iced Coffee</li>
+				  <li>Frappucinos</li>
+                  <ul>
+                    <li>Caramel Frappucino</li>
+                    <li>Mocha Frappucino</li>
+                  </ul>
+                </li>
+                <li>Tea</li>
+              </ul>
+	</div>
+              <div class="pagecode">
+              <pre>
+            <code>
+&lt;ul&gt;
+  &lt;li&gt;Freshly Brewed Coffee&lt;/li&gt;
+  &lt;li&gt;Iced Coffee&lt;/li&gt;
+  &lt;li&gt;Frappucinos&lt;/li&gt;
+  	&lt;ul&gt;
+  		&lt;li&gt;Caramel Frappucino&lt;/li&gt;
+ 		 &lt;li&gt;Mocha Frappucino&lt;/li&gt;
+	&lt;/ul&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+            </pre>
+            </div>
+	</div>
+	
+<div class="ilist">
+ <h3 id="ilist">Inline List</h3>
+      <h4>Example Inline List</h4>
+            <div class="example">
+              <ul class="inline">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Food</li>
+                <li>Smoothies</li>
+              </ul>
+	</div>
+              <div class="pagecode">
+              <pre>
+            <code>
+&lt;ul class="inline"&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Food&lt;/li&gt;
+  &lt;li&gt;Smoothies&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+            </pre>
+				</div>
+
+	</div>    
+</body>
+
+<footer>
+<div class="copyright">
+       Copyright &#64;2017 Richard Martinez
+	 </div>
+	</footer>
+	</div>
+	
+	</body>
+</html>
