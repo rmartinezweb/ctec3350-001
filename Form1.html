@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Exercise #1</title>
+<style>
+	form {margin-left: 20px }
+	h1 {margin: 10px 0 20px 20px}
+	label {display: block; margin-bottom: 20px}
+	fieldset {padding: 10px}
+	textarea {display: block}
+	label textarea {vertical-align: top}
+	textarea:focus {background-color:lightyellow}
+	input:focus {background-color: lightyellow}
+	fieldset {margin-bottom: 20px}
+	fieldset {display: inline-block; padding-right: 200px}
+
+	</style>
+</head>
+
+<body>
+
+<h1>Form Exercise #1</h1>
+
+<form action="post" method="post" name="Form Exercise 1" id="formx1">
+
+
+	<label>Username <em>(at least six characters long):</em>
+		<input type="text" name="username" id="user" minlength="6" maxlength="15" required></label>
+	<label for="email">Email:
+		<input type="email" name="email" id="email" required minlength="10"></label>
+	<label>
+		Password <em>(at least 6 characters long):</em> <input type="password" name="password" id="password" required minlength="6" maxlength="20">
+		</label>
+	<label>Confirm Password: <input type="password" name="Confirm" id="confirmpassword" required minlength="6" maxlength="20"></label>
+	<label>Favorite day of the week.<br>
+		<input type="radio" name="favoriteday" id="Monday">Monday
+		<input type="radio" name="favoriteday" id="Tuesday">Tuesday
+		<input type="radio" name="favoriteday" id="Wednesday">Wednesday
+		<input type="radio" name="favoriteday" id="Thursday">Thursday
+		<input type="radio" name="favoriteday" id="Friday">Friday
+		<input type="radio" name="favoriteday" id="Saturday">Saturday
+		<input type="radio" name="favoriteday" id="Sunday">Sunday</label>
+	<label>Selection for social media venues they use.<br>
+	<input type="checkbox" name="socialmedia" id="Facebook">Facebook
+	<input type="checkbox" name="socialmedia" id="Twitter">Twitter
+	<input type="checkbox" name="socialmedia" id="Instagram">Instagram
+	<input type="checkbox" name="socialmedia" id="Snapchat">Snapchat
+	<input type="checkbox" name="socialmedia" id="Other">Other</label>
+	<fieldset>
+		<legend>Mailing Information</legend>
+		<ol>
+		<li><label>First Name: <input type="text" name="name" id="firstname" required></label></li>
+		<li><label>Last Name: <input type="text" name="name" id="lastname" required></label></li>
+		<li><label>Address #1: <input type="text" name="addresses" id="address1" required></label></li>
+		<li><label>Address #2 (optional): <input type="text" name="addresses" id="address2"></label></li>
+		<li><label>City: <input type="text" name="location" id="city" required></label></li>
+		<li><label>State/Providence/Region: <input type="text" name="location" id="stateprovidenceregion" required></label></li>
+		<li><label>Zipcode: <input type="text" name="Zipcode" id="Zipcode" required minlength="5"></label></li> 
+		<li><label for="textarea">Comments:</label></li>
+			<textarea name="comments" id="textarea" placeholder="Any additional comments you'd like to add." rows="10" cols="40">
+			</textarea>
+		</fieldset>	<br>
+				<input type="submit" name="submit" id="submit">
+
+	</form>
+</body>
+</html>

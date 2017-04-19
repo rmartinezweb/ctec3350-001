@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<style>
+.bio {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.bio-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  border: 1px solid #444444;
+}
+
+.bio-title {
+  order: 1;
+  flex: 1 100%;
+  flex-grow: 2;
+  padding: 0.625rem;
+  background-color: #444444;
+}
+
+.bio-title h3 {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.bio-pic {
+	float: right;
+  order: 2;
+  flex: 1 20%;
+}
+
+.bio-pic img {
+  max-width: 100%;
+}
+
+.bio-description {
+  order: 3;
+  flex: 1 40%;
+  padding: 2.5%;
+}
+
+
+
+</style>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flexbox Exercise</title>
+    <meta name="description" content="Flexbox Exercise | Multiple CSS files should be created for the different outcomes">
+    <link rel="stylesheet" href="flexbox-exercise-starter-file.css">
+  </head>
+  <body>
+    <div class="bio">
+      <div class="bio-container">
+        <div class="bio-title">
+          <h3>JavaJam Coffeehouse: Flexbox</h3>
+        </div>
+        <div class="bio-pic">
+          <img src="JavaJam%20Logo.png" />
+        </div>
+        <div class="bio-description">
+          <p>JavaJam is the coffee haven you'd been looking for. Existing for over a decade, JavaJam Coffeehouse
+          provides coffee drinks and musical entertainment for all kinds of life. We take pride in our coffee
+          recipes and the acts we associate ourselves with.
+           Our business sets itself apart from all other coffeehouses. A combination of different events every
+           week, amazing coffee drinks, and online ordering makes us unique. Our menu is vast. Our baristas our
+           skilled to make any coffee or tea related drink. Located near downtown Dallas, JavaJam is well praised in the community as the "to-go" coffee shop. Free Wi-Fi, vibing atmosphere, and drinks that make you want to come back for more.
+        </div>
+      </div>
+      
+    
+  </body>
+</html>
